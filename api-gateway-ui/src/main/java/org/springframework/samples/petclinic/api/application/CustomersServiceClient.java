@@ -30,6 +30,6 @@ public class CustomersServiceClient {
     private final RestTemplate loadBalancedRestTemplate;
 
     public OwnerDetails getOwner(final int ownerId) {
-        return loadBalancedRestTemplate.getForObject("http://customer/owners/{ownerId}", OwnerDetails.class, ownerId);
+        return loadBalancedRestTemplate.getForObject("http://customer-service:7997/owners/{ownerId}", OwnerDetails.class, ownerId);
     }
 }
