@@ -1,0 +1,26 @@
+zuul:
+  prefix: /api
+  ignoredServices: '*'
+  routes:
+    vets-service: 
+      path: /vet/**
+      url: http://vets-service:7998/
+    visits-service: 
+      path: /visit/**
+      url: http://visits-service:7999/
+    customers-service: 
+      path: /customer/**
+      url: http://customer-service:7997/
+    api-gateway: 
+      path: /gateway/**
+      url: http://petclinic-ui:7000/
+    
+server:
+  port: 7000
+  compression:
+    enabled: true
+    mime-types: application/json,text/css,application/javascript
+    min-response-size: 2048
+
+# Internationalization
+spring.messages.basename: messages/messages
