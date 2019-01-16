@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
       - name: vets-service
-        image: gcr.io/ibesx-esa-sandbox-00f7f67a/bns/vets-service:1.0
+        image: gcr.io/ibesx-esa-sandbox-00f7f67a/vets-service:1.0
         resources:
           requests:
             cpu: "100m"
