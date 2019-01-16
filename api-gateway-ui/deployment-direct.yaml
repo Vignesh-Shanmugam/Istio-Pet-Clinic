@@ -74,7 +74,7 @@ spec:
   http:
   - match:
     - uri:
-      prefix: / 
+        prefix: / 
     route:
     - destination:
         host: petclinic-ui
