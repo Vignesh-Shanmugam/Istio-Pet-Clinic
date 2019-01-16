@@ -43,7 +43,7 @@ public class VisitsServiceClient {
 
     @HystrixCommand(fallbackMethod = "emptyVisitsForPets")
     public Map<Integer, List<VisitDetails>> getVisitsForPets(final List<Integer> petIds) {
-        UriComponentsBuilder builder = fromHttpUrl("http://visits-service/pets/visits")
+        UriComponentsBuilder builder = fromHttpUrl("http://visits-service:7999/pets/visits")
             .queryParam("petId", joinIds(petIds));
 
         return loadBalancedRestTemplate.getForObject(builder.toUriString(), Visits.class)
