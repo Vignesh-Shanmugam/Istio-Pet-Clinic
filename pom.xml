@@ -17,10 +17,10 @@
 
     <modules>
        
-        <module>spring-petclinic-customers-service</module>
-        <module>spring-petclinic-vets-service</module>
-        <module>spring-petclinic-visits-service</module>
-        <module>spring-petclinic-api-gateway</module>
+        <module>customer-service</module>
+        <module>vets-service</module>
+        <module>visits-service</module>
+        <module>api-gateway-ui</module>
     </modules>
 
     <properties>
